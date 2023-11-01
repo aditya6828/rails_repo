@@ -1,0 +1,1133 @@
+Started GET "/" for ::1 at 2023-10-31 11:44:26 +0530
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 375)
+Completed 200 OK in 189ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 8785)
+
+
+Started GET "/" for ::1 at 2023-10-31 11:44:52 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 206)
+
+
+Started GET "/" for ::1 at 2023-10-31 11:44:54 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-10-31 11:11:28.463985', '2023-10-31 11:11:28.463988') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20231031111013)
+Started GET "/" for ::1 at 2023-10-31 17:40:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:95:in `execute_if_updated'
+activerecord (7.1.1) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-10-31 17:42:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-10-31 17:45:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-10-31 17:45:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-10-31 17:45:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-10-31 17:45:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-10-31 17:45:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231031111013_create_users.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20231031111013)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20231031111013)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20231031111013)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "first_name" varchar, "last_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231031111013') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-10-31 17:51:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 262)
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 884)
+
+
+Started GET "/register" for ::1 at 2023-10-31 17:51:39 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/register"):
+  
+Started GET "/users/register" for ::1 at 2023-10-31 17:52:39 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/register"):
+  
+Started GET "/users" for ::1 at 2023-10-31 17:52:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/user/register" for ::1 at 2023-10-31 17:55:09 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/register"):
+  
+Started GET "/user/register" for ::1 at 2023-10-31 18:12:24 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/register"):
+  
+Started GET "/hello_world" for ::1 at 2023-10-31 18:18:51 +0530
+Processing by ExampleController#hello_world as */*
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 232)
+
+
+Started GET "/user/register" for ::1 at 2023-10-31 18:19:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/register"):
+  
+Started GET "/hello_world" for ::1 at 2023-10-31 18:21:51 +0530
+Processing by ExampleController#hello_world as */*
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 89)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:22:23 +0530
+Processing by UsersController#register as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 528)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.1) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.1) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.1) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.1) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.1) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.1) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/user/register" for ::1 at 2023-10-31 18:24:07 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:29:45 +0530
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/user/register" for ::1 at 2023-10-31 18:30:26 +0530
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/hello_world" for ::1 at 2023-10-31 18:33:28 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/hello_world"):
+  
+Started GET "/hello_world" for ::1 at 2023-10-31 18:33:36 +0530
+Processing by ExampleController#hello_world as */*
+  Parameters: {"username"=>"aditya6828", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"adityaanand6828@gmail.com", "first_name"=>"Aditya", "last_name"=>"Anand", "example"=>{"username"=>"aditya6828", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"adityaanand6828@gmail.com", "first_name"=>"Aditya", "last_name"=>"Anand"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 141)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:40:25 +0530
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/user/register" for ::1 at 2023-10-31 18:40:50 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 123)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:41:21 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 205)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:42:50 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 202)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:45:43 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:46:11 +0530
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/user/register" for ::1 at 2023-10-31 18:46:23 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register?username=aditya6828" for ::1 at 2023-10-31 18:47:11 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"aditya6828"}
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 128)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:49:08 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:49:14 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:49:21 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:49:39 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:49:58 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:50:33 +0530
+Processing by UsersController#register as */*
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 1031)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:11:in `register'
+Started POST "/user/register" for ::1 at 2023-10-31 18:50:50 +0530
+Processing by UsersController#register as */*
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 614)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:11:in `register'
+Started POST "/user/register" for ::1 at 2023-10-31 18:51:10 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 8ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:51:28 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:52:51 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:53:01 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:53:07 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 18:53:25 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 19:03:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 198)
+
+
+Started POST "/user/register" for ::1 at 2023-10-31 19:03:51 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 115)
+
+
+Started GET "/" for ::1 at 2023-10-31 23:09:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 375)
+Completed 200 OK in 61ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 4830)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 23:09:11 +0530
+Processing by Rails::WelcomeController#index as */*
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 12)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/hello-world" for 127.0.0.1 at 2023-10-31 23:10:22 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/hello-world"):
+  
+Started GET "/api/hello-world" for 127.0.0.1 at 2023-10-31 23:11:31 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/hello-world"):
+  
+Started GET "/api/hello_world" for 127.0.0.1 at 2023-10-31 23:11:56 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/hello_world"):
+  
+Started GET "/hello_world" for 127.0.0.1 at 2023-10-31 23:12:09 +0530
+Processing by ExampleController#hello_world as */*
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 236)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:15:11 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :password, :confirm_password, :id, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000265a3916af8>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 6.0ms | Allocations: 407)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:16:11 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :password, :confirm_password, :id, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001bad89ee618>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 13ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:18:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :password, :confirm_password, :id, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000018c46a8c6d0>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 9ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1387)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:20:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000026adb20c130>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 10ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1400)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:20:26 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000026adc96da40>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 6ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:20:32 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000026adc962e60>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:22:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001468989e560>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+Completed 400 Bad Request in 10ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1401)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:25:09 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :confirm_password, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001468c10b2c8>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `register'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `register'
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 1], ["username", "your_username"], ["password_digest", "[FILTERED]"], ["email", "your_email@example.com"], ["first_name", "Your"], ["last_name", "Name"], ["created_at", "2023-10-31 17:55:11.572818"], ["updated_at", "2023-10-31 17:55:11.572818"]]
+  ↳ app/controllers/users_controller.rb:33:in `register'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `register'
+Completed 200 OK in 392ms (Views: 0.4ms | ActiveRecord: 10.8ms | Allocations: 20536)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:39:16 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :confirm_password, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000014689b22c78>, params: {"username"=>"your_username", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `register'
+Completed 400 Bad Request in 9ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 922)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:39:54 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username1", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :confirm_password, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001468845b418>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email@example.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `register'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `register'
+Completed 400 Bad Request in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1050)
+
+
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:40:03 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username1", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example1.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email@example1.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :confirm_password, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001468c448b70>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example1.com", "id"=>1, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email@example1.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `register'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email@example1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `register'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `register'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 1], ["username", "your_username1"], ["password_digest", "[FILTERED]"], ["email", "your_email@example1.com"], ["first_name", "Your"], ["last_name", "Name"], ["created_at", "2023-10-31 18:10:03.932010"], ["updated_at", "2023-10-31 18:10:03.932010"]]
+  ↳ app/controllers/users_controller.rb:33:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `register'
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 2.6ms | Allocations: 3582)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: users.id):
+  
+Started POST "/user/register" for 127.0.0.1 at 2023-10-31 23:40:22 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username1", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example1.com", "id"=>2, "first_name"=>"Your", "last_name"=>"Name", "user"=>{"id"=>2, "username"=>"your_username1", "email"=>"your_email@example1.com", "first_name"=>"Your", "last_name"=>"Name"}}
+[31mUnpermitted parameters: :confirm_password, :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001468c85f330>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "email"=>"your_email@example1.com", "id"=>2, "first_name"=>"Your", "last_name"=>"Name", "controller"=>"users", "action"=>"register", "user"=>{"id"=>2, "username"=>"your_username1", "email"=>"your_email@example1.com", "first_name"=>"Your", "last_name"=>"Name"}} }[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `register'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email@example1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `register'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `register'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 2], ["username", "your_username1"], ["password_digest", "[FILTERED]"], ["email", "your_email@example1.com"], ["first_name", "Your"], ["last_name", "Name"], ["created_at", "2023-10-31 18:10:22.846734"], ["updated_at", "2023-10-31 18:10:22.846734"]]
+  ↳ app/controllers/users_controller.rb:33:in `register'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `register'
+Completed 200 OK in 249ms (Views: 0.3ms | ActiveRecord: 4.9ms | Allocations: 2510)
+
+
+Started GET "/" for ::1 at 2023-11-01 15:53:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 375)
+Completed 200 OK in 61ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 4831)
+
+
+Started GET "/user/login" for ::1 at 2023-11-01 15:53:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/login"):
+  
+Started POST "/user/login" for ::1 at 2023-11-01 15:55:05 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+Started POST "/user/register" for ::1 at 2023-11-01 15:55:57 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 15:56:11 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 125)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 15:56:57 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 15:57:10 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 125)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 16:10:16 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 206)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 16:15:36 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 16:16:56 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 16:17:43 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 125)
+
+
+Started POST "/user" for ::1 at 2023-11-01 16:18:18 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/user"):
+  
+Started POST "/user/login" for ::1 at 2023-11-01 16:18:28 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+Started POST "/user/register" for ::1 at 2023-11-01 16:31:22 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 206)
+
+
+Started POST "/user/register" for ::1 at 2023-11-01 16:34:12 +0530
+  
+NameError (undefined local variable or method `params' for UsersController:Class):
+  
+app/controllers/users_controller.rb:28:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/user/register" for ::1 at 2023-11-01 16:36:00 +0530
+  
+NameError (undefined local variable or method `params' for UsersController:Class):
+  
+app/controllers/users_controller.rb:28:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/user/register" for ::1 at 2023-11-01 16:36:46 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 23ms (ActiveRecord: 0.0ms | Allocations: 5470)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:28:in `user_params'
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/user/register" for ::1 at 2023-11-01 16:37:19 +0530
+Processing by UsersController#register as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms | Allocations: 1114)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:28:in `user_params'
+app/controllers/users_controller.rb:5:in `register'
+Started POST "/user/register" for ::1 at 2023-11-01 16:38:41 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username10", "password_digest"=>"[FILTERED]", "email"=>"your_email1@example.com", "id"=>10, "first_name"=>"Your10", "last_name"=>"Name10", "user"=>{"id"=>10, "username"=>"your_username10", "password_digest"=>"[FILTERED]", "email"=>"your_email1@example.com", "first_name"=>"Your10", "last_name"=>"Name10"}}
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username10"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `register'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email1@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:19:in `register'
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 10], ["username", "your_username10"], ["password_digest", "[FILTERED]"], ["email", "your_email1@example.com"], ["first_name", "Your10"], ["last_name", "Name10"], ["created_at", "2023-11-01 11:08:42.079142"], ["updated_at", "2023-11-01 11:08:42.079142"]]
+  ↳ app/controllers/users_controller.rb:19:in `register'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:19:in `register'
+Completed 200 OK in 501ms (Views: 0.2ms | ActiveRecord: 13.1ms | Allocations: 31142)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/user/login" for ::1 at 2023-11-01 16:44:49 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username10", "password_digest"=>"[FILTERED]", "session"=>{"username"=>"your_username10", "password_digest"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 506)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.1) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.1) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.1) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.1) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.1) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.1) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
