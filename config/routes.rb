@@ -12,12 +12,12 @@ Rails.application.routes.draw do
   get '/hello_world', to: 'example#hello_world'
 
   post '/user/login', to: 'sessions#create'
-  # delete '/user/logout' to: 'sessions#destroy'
+  get '/user/logout', to: 'sessions#logout'
   get '/user/get/:id', to: 'users#get'
 
   delete '/user/delete/:id', to: 'users#delete'
 
-
+  get '/user/list/:page', to: 'users#list'
 
   # config/routes.rb
 

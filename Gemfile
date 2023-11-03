@@ -72,3 +72,5 @@ end
 
 # Authentication
 gem 'devise'
+
+gem 'will_paginate', '~>3.0'

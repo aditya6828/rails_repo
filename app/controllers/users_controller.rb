@@ -24,17 +24,27 @@ class UsersController < ApplicationController
       end
     end
 
+#     {
+#   "username": "your_username",
+#   "password": "your_password",
+#   "email": "your_email@example.com",
+#   "id": 1,
+#   "first_name": "Your",
+#   "last_name": "Name"
+# }
+
 
     
     def get
       user_id = params[:id]
+      # render user_id
       
 
       requested_user = User.find_by(id: user_id)
 
       if requested_user
         if current_user.id == requested_user.id
-          render json: requested_user
+          render json: requested_user 
         else
           render json: {error: 'unauthorized access'}, status: 400
         end
@@ -43,14 +53,35 @@ class UsersController < ApplicationController
       end
 
     end
+
+    def list
+      page = params[:page].to_i
+      
+      per_page = 10
+
+      offset=(page-1)*per_page
+
+      users = User.limit(per_page).offset(offset)
+
+      if users.empty?
+        render json: { data: [], message: 'total limit exceeded'}
+      else
+        render json: {data: users, message: 'data extracted'}
+      end
+
+      
+
+
+
+    end
     
     def delete
 
-      user_id = params[:id]
-      puts "Received user ID in delete action: #{user_id.inspect}"
+      delete_id = params[:id]
+      # puts "Received user ID in delete action: #{user_id.inspect}"
       # puts "Received user ID in delete action: #{user_id}"
 
-      requested_user = User.find_by(id: user_id)
+      requested_user = User.find_by(id: delete_id)
 
       if requested_user
         if current_user.id == requested_user.id
@@ -65,7 +96,7 @@ class UsersController < ApplicationController
       end
     end
       
-      
+    
   
 
     private 

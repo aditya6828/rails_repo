@@ -16,10 +16,10 @@ class SessionsController < ApplicationController
         end
     end
 
-    # def logout
-    #     session[:user_id] = nil
-    #     render json: {message: 'Logout successfull'}
-    # end
+    def logout
+        session[:user_id] = nil
+        render json: {message: 'Logout successfull'}
+    end
 
 
 end

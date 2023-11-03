@@ -3123,3 +3123,711 @@ Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 812)
 ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
   
 app/controllers/users_controller.rb:49:in `delete_'
+Started DELETE "/user/list/1" for ::1 at 2023-11-03 14:20:01 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [DELETE] "/user/list/1"):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+
+
+
+
+Started GET "/user/list/1" for ::1 at 2023-11-03 14:20:37 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Started GET "/user/list/1" for ::1 at 2023-11-03 14:21:24 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Started GET "/user/list/1" for ::1 at 2023-11-03 14:25:07 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Started POST "/user/register" for ::1 at 2023-11-03 14:34:15 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username1", "password"=>"[FILTERED]", "email"=>"your_email1@example.com", "id"=>1, "first_name"=>"Your1", "last_name"=>"Name1", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email1@example.com", "first_name"=>"Your1", "last_name"=>"Name1"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556462958>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "email"=>"your_email1@example.com", "id"=>1, "first_name"=>"Your1", "last_name"=>"Name1", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email1@example.com", "first_name"=>"Your1", "last_name"=>"Name1"}} }[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556462958>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "email"=>"your_email1@example.com", "id"=>1, "first_name"=>"Your1", "last_name"=>"Name1", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email1@example.com", "first_name"=>"Your1", "last_name"=>"Name1"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email1@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556462958>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "email"=>"your_email1@example.com", "id"=>1, "first_name"=>"Your1", "last_name"=>"Name1", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email1@example.com", "first_name"=>"Your1", "last_name"=>"Name1"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556462958>, params: {"username"=>"your_username1", "password"=>"[FILTERED]", "email"=>"your_email1@example.com", "id"=>1, "first_name"=>"Your1", "last_name"=>"Name1", "controller"=>"users", "action"=>"register", "user"=>{"id"=>1, "username"=>"your_username1", "email"=>"your_email1@example.com", "first_name"=>"Your1", "last_name"=>"Name1"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 1], ["username", "your_username1"], ["password_digest", "[FILTERED]"], ["email", "your_email1@example.com"], ["first_name", "Your1"], ["last_name", "Name1"], ["created_at", "2023-11-03 09:04:16.368319"], ["updated_at", "2023-11-03 09:04:16.368319"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 624ms (Views: 0.3ms | ActiveRecord: 13.6ms | Allocations: 19855)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:34:45 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username2", "password"=>"[FILTERED]", "email"=>"your_email2@example.com", "id"=>2, "first_name"=>"Your2", "last_name"=>"Name2", "user"=>{"id"=>2, "username"=>"your_username2", "email"=>"your_email2@example.com", "first_name"=>"Your2", "last_name"=>"Name2"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001955630a1f0>, params: {"username"=>"your_username2", "password"=>"[FILTERED]", "email"=>"your_email2@example.com", "id"=>2, "first_name"=>"Your2", "last_name"=>"Name2", "controller"=>"users", "action"=>"register", "user"=>{"id"=>2, "username"=>"your_username2", "email"=>"your_email2@example.com", "first_name"=>"Your2", "last_name"=>"Name2"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001955630a1f0>, params: {"username"=>"your_username2", "password"=>"[FILTERED]", "email"=>"your_email2@example.com", "id"=>2, "first_name"=>"Your2", "last_name"=>"Name2", "controller"=>"users", "action"=>"register", "user"=>{"id"=>2, "username"=>"your_username2", "email"=>"your_email2@example.com", "first_name"=>"Your2", "last_name"=>"Name2"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email2@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001955630a1f0>, params: {"username"=>"your_username2", "password"=>"[FILTERED]", "email"=>"your_email2@example.com", "id"=>2, "first_name"=>"Your2", "last_name"=>"Name2", "controller"=>"users", "action"=>"register", "user"=>{"id"=>2, "username"=>"your_username2", "email"=>"your_email2@example.com", "first_name"=>"Your2", "last_name"=>"Name2"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001955630a1f0>, params: {"username"=>"your_username2", "password"=>"[FILTERED]", "email"=>"your_email2@example.com", "id"=>2, "first_name"=>"Your2", "last_name"=>"Name2", "controller"=>"users", "action"=>"register", "user"=>{"id"=>2, "username"=>"your_username2", "email"=>"your_email2@example.com", "first_name"=>"Your2", "last_name"=>"Name2"}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 2], ["username", "your_username2"], ["password_digest", "[FILTERED]"], ["email", "your_email2@example.com"], ["first_name", "Your2"], ["last_name", "Name2"], ["created_at", "2023-11-03 09:04:46.489841"], ["updated_at", "2023-11-03 09:04:46.489841"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 490ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 3086)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:35:12 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019555508660>, params: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "controller"=>"users", "action"=>"register", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}} }[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019555508660>, params: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "controller"=>"users", "action"=>"register", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}} }[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email3@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019555508660>, params: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "controller"=>"users", "action"=>"register", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019555508660>, params: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "controller"=>"users", "action"=>"register", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 3], ["username", "your_username3"], ["password_digest", "[FILTERED]"], ["email", "your_email3@example.com"], ["first_name", "Your3"], ["last_name", "Name3"], ["created_at", "2023-11-03 09:05:13.410910"], ["updated_at", "2023-11-03 09:05:13.410910"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 500ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 3091)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:35:18 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195515592f8>, params: {"username"=>"your_username3", "password"=>"[FILTERED]", "email"=>"your_email3@example.com", "id"=>3, "first_name"=>"Your3", "last_name"=>"Name3", "controller"=>"users", "action"=>"register", "user"=>{"id"=>3, "username"=>"your_username3", "email"=>"your_email3@example.com", "first_name"=>"Your3", "last_name"=>"Name3"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 400 Bad Request in 7ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 658)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:36:01 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username4", "password"=>"[FILTERED]", "email"=>"your_email4@example.com", "id"=>4, "first_name"=>"Your4", "last_name"=>"Name4", "user"=>{"id"=>4, "username"=>"your_username4", "email"=>"your_email4@example.com", "first_name"=>"Your4", "last_name"=>"Name4"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556489440>, params: {"username"=>"your_username4", "password"=>"[FILTERED]", "email"=>"your_email4@example.com", "id"=>4, "first_name"=>"Your4", "last_name"=>"Name4", "controller"=>"users", "action"=>"register", "user"=>{"id"=>4, "username"=>"your_username4", "email"=>"your_email4@example.com", "first_name"=>"Your4", "last_name"=>"Name4"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556489440>, params: {"username"=>"your_username4", "password"=>"[FILTERED]", "email"=>"your_email4@example.com", "id"=>4, "first_name"=>"Your4", "last_name"=>"Name4", "controller"=>"users", "action"=>"register", "user"=>{"id"=>4, "username"=>"your_username4", "email"=>"your_email4@example.com", "first_name"=>"Your4", "last_name"=>"Name4"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email4@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556489440>, params: {"username"=>"your_username4", "password"=>"[FILTERED]", "email"=>"your_email4@example.com", "id"=>4, "first_name"=>"Your4", "last_name"=>"Name4", "controller"=>"users", "action"=>"register", "user"=>{"id"=>4, "username"=>"your_username4", "email"=>"your_email4@example.com", "first_name"=>"Your4", "last_name"=>"Name4"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556489440>, params: {"username"=>"your_username4", "password"=>"[FILTERED]", "email"=>"your_email4@example.com", "id"=>4, "first_name"=>"Your4", "last_name"=>"Name4", "controller"=>"users", "action"=>"register", "user"=>{"id"=>4, "username"=>"your_username4", "email"=>"your_email4@example.com", "first_name"=>"Your4", "last_name"=>"Name4"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 4], ["username", "your_username4"], ["password_digest", "[FILTERED]"], ["email", "your_email4@example.com"], ["first_name", "Your4"], ["last_name", "Name4"], ["created_at", "2023-11-03 09:06:01.865114"], ["updated_at", "2023-11-03 09:06:01.865114"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 486ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 3086)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:36:27 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "email"=>"your_email5@example.com", "id"=>5, "first_name"=>"Your5", "last_name"=>"Name5", "user"=>{"id"=>5, "username"=>"your_username5", "email"=>"your_email5@example.com", "first_name"=>"Your5", "last_name"=>"Name5"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195577407a0>, params: {"username"=>"your_username5", "password"=>"[FILTERED]", "email"=>"your_email5@example.com", "id"=>5, "first_name"=>"Your5", "last_name"=>"Name5", "controller"=>"users", "action"=>"register", "user"=>{"id"=>5, "username"=>"your_username5", "email"=>"your_email5@example.com", "first_name"=>"Your5", "last_name"=>"Name5"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username5"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195577407a0>, params: {"username"=>"your_username5", "password"=>"[FILTERED]", "email"=>"your_email5@example.com", "id"=>5, "first_name"=>"Your5", "last_name"=>"Name5", "controller"=>"users", "action"=>"register", "user"=>{"id"=>5, "username"=>"your_username5", "email"=>"your_email5@example.com", "first_name"=>"Your5", "last_name"=>"Name5"}} }[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email5@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195577407a0>, params: {"username"=>"your_username5", "password"=>"[FILTERED]", "email"=>"your_email5@example.com", "id"=>5, "first_name"=>"Your5", "last_name"=>"Name5", "controller"=>"users", "action"=>"register", "user"=>{"id"=>5, "username"=>"your_username5", "email"=>"your_email5@example.com", "first_name"=>"Your5", "last_name"=>"Name5"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195577407a0>, params: {"username"=>"your_username5", "password"=>"[FILTERED]", "email"=>"your_email5@example.com", "id"=>5, "first_name"=>"Your5", "last_name"=>"Name5", "controller"=>"users", "action"=>"register", "user"=>{"id"=>5, "username"=>"your_username5", "email"=>"your_email5@example.com", "first_name"=>"Your5", "last_name"=>"Name5"}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 5], ["username", "your_username5"], ["password_digest", "[FILTERED]"], ["email", "your_email5@example.com"], ["first_name", "Your5"], ["last_name", "Name5"], ["created_at", "2023-11-03 09:06:27.954803"], ["updated_at", "2023-11-03 09:06:27.954803"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 496ms (Views: 0.2ms | ActiveRecord: 4.3ms | Allocations: 3076)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:36:52 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username6", "password"=>"[FILTERED]", "email"=>"your_email6@example.com", "id"=>6, "first_name"=>"Your6", "last_name"=>"Name6", "user"=>{"id"=>6, "username"=>"your_username6", "email"=>"your_email6@example.com", "first_name"=>"Your6", "last_name"=>"Name6"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a1b9c0>, params: {"username"=>"your_username6", "password"=>"[FILTERED]", "email"=>"your_email6@example.com", "id"=>6, "first_name"=>"Your6", "last_name"=>"Name6", "controller"=>"users", "action"=>"register", "user"=>{"id"=>6, "username"=>"your_username6", "email"=>"your_email6@example.com", "first_name"=>"Your6", "last_name"=>"Name6"}} }[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username6"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a1b9c0>, params: {"username"=>"your_username6", "password"=>"[FILTERED]", "email"=>"your_email6@example.com", "id"=>6, "first_name"=>"Your6", "last_name"=>"Name6", "controller"=>"users", "action"=>"register", "user"=>{"id"=>6, "username"=>"your_username6", "email"=>"your_email6@example.com", "first_name"=>"Your6", "last_name"=>"Name6"}} }[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email6@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a1b9c0>, params: {"username"=>"your_username6", "password"=>"[FILTERED]", "email"=>"your_email6@example.com", "id"=>6, "first_name"=>"Your6", "last_name"=>"Name6", "controller"=>"users", "action"=>"register", "user"=>{"id"=>6, "username"=>"your_username6", "email"=>"your_email6@example.com", "first_name"=>"Your6", "last_name"=>"Name6"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a1b9c0>, params: {"username"=>"your_username6", "password"=>"[FILTERED]", "email"=>"your_email6@example.com", "id"=>6, "first_name"=>"Your6", "last_name"=>"Name6", "controller"=>"users", "action"=>"register", "user"=>{"id"=>6, "username"=>"your_username6", "email"=>"your_email6@example.com", "first_name"=>"Your6", "last_name"=>"Name6"}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 6], ["username", "your_username6"], ["password_digest", "[FILTERED]"], ["email", "your_email6@example.com"], ["first_name", "Your6"], ["last_name", "Name6"], ["created_at", "2023-11-03 09:06:53.188909"], ["updated_at", "2023-11-03 09:06:53.188909"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 502ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3080)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:37:22 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username7", "password"=>"[FILTERED]", "email"=>"your_email7@example.com", "id"=>7, "first_name"=>"Your7", "last_name"=>"Name7", "user"=>{"id"=>7, "username"=>"your_username7", "email"=>"your_email7@example.com", "first_name"=>"Your7", "last_name"=>"Name7"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a76c30>, params: {"username"=>"your_username7", "password"=>"[FILTERED]", "email"=>"your_email7@example.com", "id"=>7, "first_name"=>"Your7", "last_name"=>"Name7", "controller"=>"users", "action"=>"register", "user"=>{"id"=>7, "username"=>"your_username7", "email"=>"your_email7@example.com", "first_name"=>"Your7", "last_name"=>"Name7"}} }[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username7"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a76c30>, params: {"username"=>"your_username7", "password"=>"[FILTERED]", "email"=>"your_email7@example.com", "id"=>7, "first_name"=>"Your7", "last_name"=>"Name7", "controller"=>"users", "action"=>"register", "user"=>{"id"=>7, "username"=>"your_username7", "email"=>"your_email7@example.com", "first_name"=>"Your7", "last_name"=>"Name7"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email7@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a76c30>, params: {"username"=>"your_username7", "password"=>"[FILTERED]", "email"=>"your_email7@example.com", "id"=>7, "first_name"=>"Your7", "last_name"=>"Name7", "controller"=>"users", "action"=>"register", "user"=>{"id"=>7, "username"=>"your_username7", "email"=>"your_email7@example.com", "first_name"=>"Your7", "last_name"=>"Name7"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a76c30>, params: {"username"=>"your_username7", "password"=>"[FILTERED]", "email"=>"your_email7@example.com", "id"=>7, "first_name"=>"Your7", "last_name"=>"Name7", "controller"=>"users", "action"=>"register", "user"=>{"id"=>7, "username"=>"your_username7", "email"=>"your_email7@example.com", "first_name"=>"Your7", "last_name"=>"Name7"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 7], ["username", "your_username7"], ["password_digest", "[FILTERED]"], ["email", "your_email7@example.com"], ["first_name", "Your7"], ["last_name", "Name7"], ["created_at", "2023-11-03 09:07:22.732684"], ["updated_at", "2023-11-03 09:07:22.732684"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 513ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 3085)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:37:43 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username8", "password"=>"[FILTERED]", "email"=>"your_email8@example.com", "id"=>8, "first_name"=>"Your8", "last_name"=>"Name8", "user"=>{"id"=>8, "username"=>"your_username8", "email"=>"your_email8@example.com", "first_name"=>"Your8", "last_name"=>"Name8"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001955624d3e8>, params: {"username"=>"your_username8", "password"=>"[FILTERED]", "email"=>"your_email8@example.com", "id"=>8, "first_name"=>"Your8", "last_name"=>"Name8", "controller"=>"users", "action"=>"register", "user"=>{"id"=>8, "username"=>"your_username8", "email"=>"your_email8@example.com", "first_name"=>"Your8", "last_name"=>"Name8"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username8"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 400 Bad Request in 5ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 654)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:38:07 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username9", "password"=>"[FILTERED]", "email"=>"your_email9@example.com", "id"=>9, "first_name"=>"Your9", "last_name"=>"Name9", "user"=>{"id"=>9, "username"=>"your_username9", "email"=>"your_email9@example.com", "first_name"=>"Your9", "last_name"=>"Name9"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x000001955646f158>, params: {"username"=>"your_username9", "password"=>"[FILTERED]", "email"=>"your_email9@example.com", "id"=>9, "first_name"=>"Your9", "last_name"=>"Name9", "controller"=>"users", "action"=>"register", "user"=>{"id"=>9, "username"=>"your_username9", "email"=>"your_email9@example.com", "first_name"=>"Your9", "last_name"=>"Name9"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username9"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 400 Bad Request in 5ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 654)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:38:32 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username10", "password"=>"[FILTERED]", "email"=>"your_email10@example.com", "id"=>10, "first_name"=>"Your10", "last_name"=>"Name10", "user"=>{"id"=>10, "username"=>"your_username10", "email"=>"your_email10@example.com", "first_name"=>"Your10", "last_name"=>"Name10"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195579d9c50>, params: {"username"=>"your_username10", "password"=>"[FILTERED]", "email"=>"your_email10@example.com", "id"=>10, "first_name"=>"Your10", "last_name"=>"Name10", "controller"=>"users", "action"=>"register", "user"=>{"id"=>10, "username"=>"your_username10", "email"=>"your_email10@example.com", "first_name"=>"Your10", "last_name"=>"Name10"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username10"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 400 Bad Request in 8ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 654)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:38:56 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username11", "password"=>"[FILTERED]", "email"=>"your_email11@example.com", "id"=>11, "first_name"=>"Your11", "last_name"=>"Name11", "user"=>{"id"=>11, "username"=>"your_username11", "email"=>"your_email11@example.com", "first_name"=>"Your11", "last_name"=>"Name11"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557ab8220>, params: {"username"=>"your_username11", "password"=>"[FILTERED]", "email"=>"your_email11@example.com", "id"=>11, "first_name"=>"Your11", "last_name"=>"Name11", "controller"=>"users", "action"=>"register", "user"=>{"id"=>11, "username"=>"your_username11", "email"=>"your_email11@example.com", "first_name"=>"Your11", "last_name"=>"Name11"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username11"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557ab8220>, params: {"username"=>"your_username11", "password"=>"[FILTERED]", "email"=>"your_email11@example.com", "id"=>11, "first_name"=>"Your11", "last_name"=>"Name11", "controller"=>"users", "action"=>"register", "user"=>{"id"=>11, "username"=>"your_username11", "email"=>"your_email11@example.com", "first_name"=>"Your11", "last_name"=>"Name11"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email11@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557ab8220>, params: {"username"=>"your_username11", "password"=>"[FILTERED]", "email"=>"your_email11@example.com", "id"=>11, "first_name"=>"Your11", "last_name"=>"Name11", "controller"=>"users", "action"=>"register", "user"=>{"id"=>11, "username"=>"your_username11", "email"=>"your_email11@example.com", "first_name"=>"Your11", "last_name"=>"Name11"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557ab8220>, params: {"username"=>"your_username11", "password"=>"[FILTERED]", "email"=>"your_email11@example.com", "id"=>11, "first_name"=>"Your11", "last_name"=>"Name11", "controller"=>"users", "action"=>"register", "user"=>{"id"=>11, "username"=>"your_username11", "email"=>"your_email11@example.com", "first_name"=>"Your11", "last_name"=>"Name11"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 11], ["username", "your_username11"], ["password_digest", "[FILTERED]"], ["email", "your_email11@example.com"], ["first_name", "Your11"], ["last_name", "Name11"], ["created_at", "2023-11-03 09:08:56.786244"], ["updated_at", "2023-11-03 09:08:56.786244"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 485ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 3073)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:39:19 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username12", "password"=>"[FILTERED]", "email"=>"your_email12@example.com", "id"=>12, "first_name"=>"Your12", "last_name"=>"Name12", "user"=>{"id"=>12, "username"=>"your_username12", "email"=>"your_email12@example.com", "first_name"=>"Your12", "last_name"=>"Name12"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a52308>, params: {"username"=>"your_username12", "password"=>"[FILTERED]", "email"=>"your_email12@example.com", "id"=>12, "first_name"=>"Your12", "last_name"=>"Name12", "controller"=>"users", "action"=>"register", "user"=>{"id"=>12, "username"=>"your_username12", "email"=>"your_email12@example.com", "first_name"=>"Your12", "last_name"=>"Name12"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username12"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+Completed 400 Bad Request in 7ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 654)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:39:38 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username13", "password"=>"[FILTERED]", "email"=>"your_email13@example.com", "id"=>13, "first_name"=>"Your13", "last_name"=>"Name13", "user"=>{"id"=>13, "username"=>"your_username13", "email"=>"your_email13@example.com", "first_name"=>"Your13", "last_name"=>"Name13"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a10fc0>, params: {"username"=>"your_username13", "password"=>"[FILTERED]", "email"=>"your_email13@example.com", "id"=>13, "first_name"=>"Your13", "last_name"=>"Name13", "controller"=>"users", "action"=>"register", "user"=>{"id"=>13, "username"=>"your_username13", "email"=>"your_email13@example.com", "first_name"=>"Your13", "last_name"=>"Name13"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username13"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a10fc0>, params: {"username"=>"your_username13", "password"=>"[FILTERED]", "email"=>"your_email13@example.com", "id"=>13, "first_name"=>"Your13", "last_name"=>"Name13", "controller"=>"users", "action"=>"register", "user"=>{"id"=>13, "username"=>"your_username13", "email"=>"your_email13@example.com", "first_name"=>"Your13", "last_name"=>"Name13"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email13@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a10fc0>, params: {"username"=>"your_username13", "password"=>"[FILTERED]", "email"=>"your_email13@example.com", "id"=>13, "first_name"=>"Your13", "last_name"=>"Name13", "controller"=>"users", "action"=>"register", "user"=>{"id"=>13, "username"=>"your_username13", "email"=>"your_email13@example.com", "first_name"=>"Your13", "last_name"=>"Name13"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019557a10fc0>, params: {"username"=>"your_username13", "password"=>"[FILTERED]", "email"=>"your_email13@example.com", "id"=>13, "first_name"=>"Your13", "last_name"=>"Name13", "controller"=>"users", "action"=>"register", "user"=>{"id"=>13, "username"=>"your_username13", "email"=>"your_email13@example.com", "first_name"=>"Your13", "last_name"=>"Name13"}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 13], ["username", "your_username13"], ["password_digest", "[FILTERED]"], ["email", "your_email13@example.com"], ["first_name", "Your13"], ["last_name", "Name13"], ["created_at", "2023-11-03 09:09:39.131517"], ["updated_at", "2023-11-03 09:09:39.131517"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 487ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 3073)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:40:00 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username14", "password"=>"[FILTERED]", "email"=>"your_email14@example.com", "id"=>14, "first_name"=>"Your14", "last_name"=>"Name14", "user"=>{"id"=>14, "username"=>"your_username14", "email"=>"your_email14@example.com", "first_name"=>"Your14", "last_name"=>"Name14"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556684d80>, params: {"username"=>"your_username14", "password"=>"[FILTERED]", "email"=>"your_email14@example.com", "id"=>14, "first_name"=>"Your14", "last_name"=>"Name14", "controller"=>"users", "action"=>"register", "user"=>{"id"=>14, "username"=>"your_username14", "email"=>"your_email14@example.com", "first_name"=>"Your14", "last_name"=>"Name14"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username14"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556684d80>, params: {"username"=>"your_username14", "password"=>"[FILTERED]", "email"=>"your_email14@example.com", "id"=>14, "first_name"=>"Your14", "last_name"=>"Name14", "controller"=>"users", "action"=>"register", "user"=>{"id"=>14, "username"=>"your_username14", "email"=>"your_email14@example.com", "first_name"=>"Your14", "last_name"=>"Name14"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email14@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556684d80>, params: {"username"=>"your_username14", "password"=>"[FILTERED]", "email"=>"your_email14@example.com", "id"=>14, "first_name"=>"Your14", "last_name"=>"Name14", "controller"=>"users", "action"=>"register", "user"=>{"id"=>14, "username"=>"your_username14", "email"=>"your_email14@example.com", "first_name"=>"Your14", "last_name"=>"Name14"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x0000019556684d80>, params: {"username"=>"your_username14", "password"=>"[FILTERED]", "email"=>"your_email14@example.com", "id"=>14, "first_name"=>"Your14", "last_name"=>"Name14", "controller"=>"users", "action"=>"register", "user"=>{"id"=>14, "username"=>"your_username14", "email"=>"your_email14@example.com", "first_name"=>"Your14", "last_name"=>"Name14"}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 14], ["username", "your_username14"], ["password_digest", "[FILTERED]"], ["email", "your_email14@example.com"], ["first_name", "Your14"], ["last_name", "Name14"], ["created_at", "2023-11-03 09:10:00.781347"], ["updated_at", "2023-11-03 09:10:00.781347"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 521ms (Views: 0.2ms | ActiveRecord: 2.4ms | Allocations: 3027)
+
+
+Started POST "/user/register" for ::1 at 2023-11-03 14:40:19 +0530
+Processing by UsersController#register as */*
+  Parameters: {"username"=>"your_username15", "password"=>"[FILTERED]", "email"=>"your_email15@example.com", "id"=>15, "first_name"=>"Your15", "last_name"=>"Name15", "user"=>{"id"=>15, "username"=>"your_username15", "email"=>"your_email15@example.com", "first_name"=>"Your15", "last_name"=>"Name15"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195564c6c28>, params: {"username"=>"your_username15", "password"=>"[FILTERED]", "email"=>"your_email15@example.com", "id"=>15, "first_name"=>"Your15", "last_name"=>"Name15", "controller"=>"users", "action"=>"register", "user"=>{"id"=>15, "username"=>"your_username15", "email"=>"your_email15@example.com", "first_name"=>"Your15", "last_name"=>"Name15"}} }[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username15"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195564c6c28>, params: {"username"=>"your_username15", "password"=>"[FILTERED]", "email"=>"your_email15@example.com", "id"=>15, "first_name"=>"Your15", "last_name"=>"Name15", "controller"=>"users", "action"=>"register", "user"=>{"id"=>15, "username"=>"your_username15", "email"=>"your_email15@example.com", "first_name"=>"Your15", "last_name"=>"Name15"}} }[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "your_email15@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `register'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195564c6c28>, params: {"username"=>"your_username15", "password"=>"[FILTERED]", "email"=>"your_email15@example.com", "id"=>15, "first_name"=>"Your15", "last_name"=>"Name15", "controller"=>"users", "action"=>"register", "user"=>{"id"=>15, "username"=>"your_username15", "email"=>"your_email15@example.com", "first_name"=>"Your15", "last_name"=>"Name15"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: register, request: #<ActionDispatch::Request:0x00000195564c6c28>, params: {"username"=>"your_username15", "password"=>"[FILTERED]", "email"=>"your_email15@example.com", "id"=>15, "first_name"=>"Your15", "last_name"=>"Name15", "controller"=>"users", "action"=>"register", "user"=>{"id"=>15, "username"=>"your_username15", "email"=>"your_email15@example.com", "first_name"=>"Your15", "last_name"=>"Name15"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["id", 15], ["username", "your_username15"], ["password_digest", "[FILTERED]"], ["email", "your_email15@example.com"], ["first_name", "Your15"], ["last_name", "Name15"], ["created_at", "2023-11-03 09:10:19.870175"], ["updated_at", "2023-11-03 09:10:19.870175"]]
+  ↳ app/controllers/users_controller.rb:20:in `register'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `register'
+Completed 200 OK in 487ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 3072)
+
+
+Started POST "/user/login" for ::1 at 2023-11-03 14:41:52 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username12", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username12", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username12"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 236ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Started GET "/user/get/12" for ::1 at 2023-11-03 14:42:39 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username12", "password"=>"[FILTERED]", "id"=>"12", "user"=>{"username"=>"your_username12"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:99:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `get'
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 1.2ms | Allocations: 1545)
+
+
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:13:29 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:13:51 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Started GET "/user/list/:1" for ::1 at 2023-11-03 15:16:04 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:19:46 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:19:59 +0530
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:23:02 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#list as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 823)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:57:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:25:08 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#list as */*
+Completed 400 Bad Request in 11ms (ActiveRecord: 0.0ms | Allocations: 1678)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:57:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:44:21 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#list as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 813)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:57:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:49:04 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#list as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 813)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:57:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:49:22 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#list as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 812)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:57:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 15:49:40 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#list as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 813)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:57:in `list'
+Started GET "/user/get/1" for ::1 at 2023-11-03 15:51:40 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+
+   
+Processing by UsersController#get as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+Completed 400 Bad Request in 105ms (ActiveRecord: 3.4ms | Allocations: 17315)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:39:in `get'
+Started POST "/user/login" for ::1 at 2023-11-03 15:53:20 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username3", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username3"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 234ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 859)
+
+
+Started POST "/user/get/3" for ::1 at 2023-11-03 15:53:49 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/user/get/3"):
+  
+Started GET "/user/get/3" for ::1 at 2023-11-03 15:53:54 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username3", "password"=>"[FILTERED]", "id"=>"3", "user"=>{"username"=>"your_username3"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms | Allocations: 1558)
+
+
+  
+ActionView::MissingTemplate (Missing template users/3, application/3 with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :webp, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :turbo_stream], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/hp/OneDrive/Desktop/rails_repo/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.1/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionmailbox-7.1.1/app/views"
+):
+  
+app/controllers/users_controller.rb:40:in `get'
+Started GET "/user/get/2" for ::1 at 2023-11-03 15:54:21 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username3", "password"=>"[FILTERED]", "id"=>"2", "user"=>{"username"=>"your_username3"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.2ms | Allocations: 5288)
+
+
+  
+ActionView::MissingTemplate (Missing template users/2, application/2 with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :webp, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :turbo_stream], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/hp/OneDrive/Desktop/rails_repo/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.1/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionmailbox-7.1.1/app/views"
+):
+  
+app/controllers/users_controller.rb:40:in `get'
+Started POST "/user/login" for ::1 at 2023-11-03 15:54:57 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username5", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username5"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 233ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 666)
+
+
+Started GET "/user/get/5" for ::1 at 2023-11-03 15:55:32 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "id"=>"5", "user"=>{"username"=>"your_username5"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 1265)
+
+
+  
+ActionView::MissingTemplate (Missing template users/5, application/5 with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :webp, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :turbo_stream], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/hp/OneDrive/Desktop/rails_repo/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.1/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionmailbox-7.1.1/app/views"
+):
+  
+app/controllers/users_controller.rb:40:in `get'
+Started GET "/user/get/5" for ::1 at 2023-11-03 15:57:08 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "id"=>"5", "user"=>{"username"=>"your_username5"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `get'
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 4.7ms | Allocations: 4809)
+
+
+Started GET "/user/get/5" for ::1 at 2023-11-03 15:58:08 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "id"=>"5", "user"=>{"username"=>"your_username5"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `get'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 4575)
+
+
+Started GET "/user/get/5" for ::1 at 2023-11-03 15:58:24 +0530
+Processing by UsersController#get as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "id"=>"5", "user"=>{"username"=>"your_username5"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:111:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `get'
+Completed 200 OK in 13ms (Views: 1.3ms | ActiveRecord: 3.4ms | Allocations: 4725)
+
+
+Started GET "/user/list/1" for ::1 at 2023-11-03 16:25:58 +0530
+Processing by UsersController#list as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "page"=>"1", "user"=>{"username"=>"your_username5"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1249)
+
+
+  
+ActionView::MissingTemplate (Missing template users/1, application/1 with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :webp, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :turbo_stream], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/hp/OneDrive/Desktop/rails_repo/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.1/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionmailbox-7.1.1/app/views"
+):
+  
+app/controllers/users_controller.rb:72:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 16:26:26 +0530
+Processing by UsersController#list as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "page"=>"1", "user"=>{"username"=>"your_username5"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 6.1ms | Allocations: 1309)
+
+
+  
+ActionView::MissingTemplate (Missing template users/1, application/1 with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :webp, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :turbo_stream], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/hp/OneDrive/Desktop/rails_repo/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.1/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionmailbox-7.1.1/app/views"
+):
+  
+app/controllers/users_controller.rb:72:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 16:27:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#list as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "page"=>"1", "user"=>{"username"=>"your_username5"}}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.4ms | Allocations: 3874)
+
+
+  
+ActionView::MissingTemplate (Missing template users/1, application/1 with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :webp, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :turbo_stream], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/hp/OneDrive/Desktop/rails_repo/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.1/app/views"
+  * "C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionmailbox-7.1.1/app/views"
+):
+  
+app/controllers/users_controller.rb:72:in `list'
+Started GET "/user/list/1" for ::1 at 2023-11-03 16:28:58 +0530
+Processing by UsersController#list as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "page"=>"1", "user"=>{"username"=>"your_username5"}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  ↳ app/controllers/users_controller.rb:66:in `list'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/users_controller.rb:69:in `list'
+Completed 200 OK in 98ms (Views: 63.9ms | ActiveRecord: 3.4ms | Allocations: 15793)
+
+
+Started GET "/user/list/2" for ::1 at 2023-11-03 16:29:22 +0530
+Processing by UsersController#list as */*
+  Parameters: {"username"=>"your_username5", "password"=>"[FILTERED]", "page"=>"2", "user"=>{"username"=>"your_username5"}}
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 10]]
+  ↳ app/controllers/users_controller.rb:66:in `list'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/controllers/users_controller.rb:69:in `list'
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 1337)
+
+
+Started GET "/user/login" for ::1 at 2023-11-03 16:44:45 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/login"):
+  
+Started GET "/user/login" for ::1 at 2023-11-03 16:46:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user/login"):
+  
+Started GET "/user/login" for ::1 at 2023-11-03 16:47:00 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/login"):
+  
+Started POST "/user/login" for ::1 at 2023-11-03 16:47:44 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username15", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username15", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username15"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 333ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 18664)
+
+
+Started DELETE "/user/delete/15" for ::1 at 2023-11-03 16:48:45 +0530
+Processing by UsersController#delete as */*
+  Parameters: {"username"=>"your_username15", "password"=>"[FILTERED]", "id"=>"15", "user"=>{"username"=>"your_username15"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:84:in `delete'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:114:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:88:in `delete'
+  [1m[36mUser Destroy (5.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/users_controller.rb:88:in `delete'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:88:in `delete'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 12.6ms | Allocations: 5953)
+
+
+Started POST "/user/login" for ::1 at 2023-11-03 16:50:18 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username15", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username15", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username15"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 400 Bad Request in 4ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 626)
+
+
+Started DELETE "/user/logout" for ::1 at 2023-11-03 16:52:46 +0530
+  
+SyntaxError (C:/Users/hp/OneDrive/Desktop/rails_repo/config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end' or dummy end
+  delete '/user/logout' to: 'sessions#logout'
+                        ^~
+):
+  
+config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started POST "/user/login" for ::1 at 2023-11-03 16:55:44 +0530
+  
+SyntaxError (C:/Users/hp/OneDrive/Desktop/rails_repo/config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end' or dummy end
+  get '/user/logout' to: 'sessions#logout'
+                     ^~
+):
+  
+config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started POST "/user/login" for ::1 at 2023-11-03 16:56:01 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"your_username14", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username14", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "your_username14"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 262ms (Views: 0.2ms | ActiveRecord: 4.7ms | Allocations: 5302)
+
+
+Started GET "/user/logout" for ::1 at 2023-11-03 16:56:15 +0530
+Processing by SessionsController#logout as */*
+  Parameters: {"username"=>"your_username14", "password"=>"[FILTERED]", "session"=>{"username"=>"your_username14", "password"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 85)
+
+
