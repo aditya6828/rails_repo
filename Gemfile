@@ -74,3 +74,5 @@ end
 gem 'devise'
 
 gem 'will_paginate', '~>3.0'
+
+gem 'jwt'

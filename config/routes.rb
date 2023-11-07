@@ -7,17 +7,25 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-
-  post '/user/register', to: 'users#register'
   get '/hello_world', to: 'example#hello_world'
 
+  post '/user/register', to: 'users#register'
+ 
+  post 'auth/login', to: 'authentication#login'
+
+  # get '/*a', to: 'application#not_found'
+
   post '/user/login', to: 'sessions#create'
+
   get '/user/logout', to: 'sessions#logout'
+
   get '/user/get/:id', to: 'users#get'
 
   delete '/user/delete/:id', to: 'users#delete'
 
   get '/user/list/:page', to: 'users#list'
+
+  # post '/user/forget_password' to: 'users#forgot_password'
 
   # config/routes.rb
 

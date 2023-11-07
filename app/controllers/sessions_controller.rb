@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
 
             session[:user_id] = user.id
             render json: {user_id: user.id}
+            
 
         else
             render json: {error: 'Invalid username or password'}, status: 400
