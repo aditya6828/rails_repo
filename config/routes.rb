@@ -25,7 +25,17 @@ Rails.application.routes.draw do
 
   get '/user/list/:page', to: 'users#list'
 
-  # post '/user/forget_password' to: 'users#forgot_password'
+  get '/reset_password_page', to: 'users#reset_password', as: 'reset_password'
+
+  post '/update_password', to: 'users#update_password'
+
+  post '/user/forget_password', to: 'users#forget_password'
+
+  # get '/reset_password', to: 'users#reset_password'
+
+  # post '/update_password', to: 'users#update_password'
+
+  post '/reset_password_submit', to: 'users#reset_password_submit', as: 'reset_password_submit'
 
   # config/routes.rb
 

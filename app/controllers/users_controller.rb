@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token 
   before_action :authenticate_user, only: [:get]
   
   def register
@@ -39,15 +39,19 @@ class UsersController < ApplicationController
   def get
     user_id = params[:id]
     # render user_id
+    # render json: { user_id: user_id }
     
 
-    requested_user = User.find_by(id: user_id)
+    requested_user = User.find_by(params[:id])
+    # puts requested_user
 
     if requested_user
-      if current_user.id == requested_user.id
+      render json: requested_user
+      render json: { user_id: user_id }
+      if current_user && current_user.id == requested_user.id
         render json: requested_user 
       else
-        render json: {error: 'unauthorized access'}, status: 400
+        
       end
     else
       render json: {error: 'User not found'}, status: 400
@@ -85,12 +89,13 @@ class UsersController < ApplicationController
         session[:user_token] = nil
         render json: {message: 'User deleted successfully'}
       else
-        render json: {error: 'unauthorized access'}, status: 400
+        render json: {error: 'unauthorized access abcd'}, status: 400
       end
     else
       render json: {error: 'User not found'}, status: 400
     end
   end
+
 
 
   def forget_password
@@ -101,13 +106,14 @@ class UsersController < ApplicationController
       return
     end
 
-    e_user = User.find_by(email: email)
+    user = User.find_by(email: email)
 
-    if e_user
+    if user
 
       token = SecureRandom.hex(20)
-      e_user.update(password_reset_token: token, password_reset_token_expires_at: 1.hour.from_now)
-      
+      user.update(password_reset_token: token, password_reset_token_expires_at: 1.hour.from_now)
+
+      send_password_reset_email(user, token)
     
       
       render json: {message: 'Pasword reset email sent successfully'}
@@ -115,6 +121,71 @@ class UsersController < ApplicationController
       render json: {error: 'User not found'}, status: 400
     end
   end
+
+  def reset_password
+    token = params[:token]
+    user = User.find_by(password_reset_token: token)
+    # puts user.password_reset_token_expires_at
+    if user && user.password_reset_token_expires_at > Time.now
+      # render json: { message: 'Password reset page' }
+      render 'users/reset_password'
+      # render '/reset_password_page'
+      
+    else
+      render json: {error: 'Invalid or expired token'}, status: 400
+    end
+  end
+
+  def update_password
+    token = params[:token]
+    user = User.find_by(password_reset_token: token)
+    
+    if user && user.password_reset_token_expires_at > Time.now
+      new_password = params[:new_password]
+
+      # Validate and update the password
+      if new_password.present?
+        user.update(password: new_password, password_reset_token: nil, password_reset_token_expires_at: nil)
+        render json: { message: 'Password updated successfully' }
+      else
+        render json: { error: 'New password cannot be blank' }, status: 400
+      end
+    else
+      render json: { error: 'Invalid or expired token' }, status: 400
+    end
+  end
+
+  def reset_password_submit
+    token = params[:token]
+    user = User.find_by(password_reset_token: token)
+    # session[:user_token] = user.token # Set the token when the user logs in
+
+
+    # puts user
+    # puts user.password_reset_token_expires_at
+    if user && user.password_reset_token_expires_at > Time.now
+      new_password = params[:user][:new_password]
+      password_confirmation = params[:user][:password_confirmation]
+
+      if new_password.present? && new_password == password_confirmation
+        # Update the user's password
+        user.update(password: new_password, password_reset_token: nil, password_reset_token_expires_at: nil)
+
+        # Optional: You might want to log the user in after password reset
+        session[:user_id] = user.id
+
+        flash[:notice] = 'Password reset successfully!'
+        redirect_to root_path
+      else
+        flash[:error] = 'New password and password confirmation do not match'
+        render 'users/reset_password'
+      end
+    else
+      flash[:error] = 'Invalid or expired token'
+      redirect_to root_path
+    end
+  end
+
 
 
   private 
@@ -142,5 +213,10 @@ class UsersController < ApplicationController
       # @current_user ||= User.find_by(id: user_id)
     end
   end 
+
+  def send_password_reset_email(user, token)
+    # Use ActionMailer to send the email using SMTP
+    UserMailer.password_reset_email(user, token).deliver_now
+  end
 
 end
