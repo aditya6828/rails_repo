@@ -7679,3 +7679,1075 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 1
 NoMethodError (undefined method `>' for nil:NilClass):
   
 app/controllers/users_controller.rb:166:in `reset_password_submit'
+Started GET "/" for ::1 at 2023-11-13 15:43:11 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 375)
+Completed 200 OK in 58ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 5253)
+
+
+Started GET "/:images" for ::1 at 2023-11-13 15:52:17 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/:images"):
+  
+Started GET "/images/new" for ::1 at 2023-11-13 15:54:02 +0530
+  
+SyntaxError (C:/Users/hp/OneDrive/Desktop/rails_repo/app/controllers/images_controller.rb:24: syntax error, unexpected `end'):
+  
+app/controllers/images_controller.rb:24: syntax error, unexpected `end'
+Started GET "/images/new" for ::1 at 2023-11-13 15:55:34 +0530
+  
+ActionController::RoutingError (uninitialized constant ImagesController):
+  
+Started GET "/images/new" for ::1 at 2023-11-13 15:55:46 +0530
+  
+SyntaxError (C:/Users/hp/OneDrive/Desktop/rails_repo/app/controllers/images_controller.rb:24: syntax error, unexpected `end'):
+  
+app/controllers/images_controller.rb:24: syntax error, unexpected `end'
+Started GET "/images/new" for ::1 at 2023-11-13 15:57:39 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 677)
+
+
+  
+NameError (uninitialized constant Image):
+  
+app/models/image.rb:1:in `<main>'
+app/controllers/images_controller.rb:4:in `new'
+Started GET "/images/new" for ::1 at 2023-11-13 15:58:40 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 4.0ms | Allocations: 4345)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+Started GET "/images/new" for ::1 at 2023-11-13 15:59:31 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.5ms | Allocations: 2307)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+Started GET "/images/new" for ::1 at 2023-11-13 16:01:14 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.6ms | Allocations: 2310)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+Started GET "/images/new" for ::1 at 2023-11-13 16:02:24 +0530
+Processing by ImagesController#new as */*
+  Parameters: {"email"=>"adityaanand6828@gmail.com", "image"=>{"email"=>"adityaanand6828@gmail.com"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 606)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+Started POST "/images" for ::1 at 2023-11-13 16:02:52 +0530
+Processing by ImagesController#create as */*
+  Parameters: {"email"=>"adityaanand6828@gmail.com", "image"=>{"email"=>"adityaanand6828@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 541)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.1.1) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.1) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.1) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.1) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.1) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.1) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.1) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.1) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.1) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/images" for ::1 at 2023-11-13 16:03:26 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+Started GET "/images" for ::1 at 2023-11-13 16:04:05 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+Started GET "/images" for ::1 at 2023-11-13 16:04:22 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_image' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:43:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/images" for ::1 at 2023-11-13 16:08:08 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+Started GET "/images/new" for ::1 at 2023-11-13 16:08:32 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.5ms | Allocations: 2306)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+Started GET "/images/new" for ::1 at 2023-11-13 16:09:37 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.5ms | Allocations: 2310)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+Started GET "/images/new" for ::1 at 2023-11-13 16:15:37 +0530
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.2ms | Allocations: 2267)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'images'):
+  
+app/controllers/images_controller.rb:4:in `new'
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateImages (20231113104816)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "images" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "file" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231113104816') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/images/new" for ::1 at 2023-11-13 16:20:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1684)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1819)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.8ms | Allocations: 22581)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Upload Image</h1>
+<%= form_with(model: @image, url: images_path, method: :post, multipart: true)
+    <div>
+        <%= form.label :image %>
+        <%= form.file_field :image, accept: 'image/*' %>
+    </div>
+    <div>
+        <%= form.submit 'Upload Image' %>
+    </div>
+<% end %>
+):
+1:    <h1>Upload Image</h1>
+2:    <%= form_with(model: @image, url: images_path, method: :post, multipart: true)
+3:        <div>
+4:            <%= form.label :image %>
+5:            <%= form.file_field :image, accept: 'image/*' %>
+6:        </div>
+7:        <div>
+8:            <%= form.submit 'Upload Image' %>
+9:        </div>
+10:    <% end %>
+  
+app/views/images/new.html.erb:3: syntax error, unexpected '<'
+app/views/images/new.html.erb:10: syntax error, unexpected `end', expecting ')'
+app/views/images/new.html.erb:12: syntax error, unexpected `end', expecting ')'
+Started GET "/images/new" for ::1 at 2023-11-13 16:22:09 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1182)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1283)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.0ms | Allocations: 6200)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Upload Image</h1>
+<%= form_with(model: @image, url: images_path, method: :post, multipart: true)
+    <div>
+        <%= form.label :image %>
+        <%= form.file_field :image, accept: 'image/*' %>
+    </div>
+    <div>
+        <%= form.submit 'Upload Image' %>
+    </div>
+<% end %>
+):
+1:    <h1>Upload Image</h1>
+2:    <%= form_with(model: @image, url: images_path, method: :post, multipart: true)
+3:        <div>
+4:            <%= form.label :image %>
+5:            <%= form.file_field :image, accept: 'image/*' %>
+6:        </div>
+7:        <div>
+8:            <%= form.submit 'Upload Image' %>
+9:        </div>
+10:    <% end %>
+  
+app/views/images/new.html.erb:3: syntax error, unexpected '<'
+app/views/images/new.html.erb:10: syntax error, unexpected `end', expecting ')'
+app/views/images/new.html.erb:12: syntax error, unexpected `end', expecting ')'
+Started GET "/images/new" for ::1 at 2023-11-13 16:23:37 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 26.5ms | Allocations: 1837)
+  Rendered layout layouts/application.html.erb (Duration: 138.3ms | Allocations: 23128)
+Completed 200 OK in 164ms (Views: 150.0ms | ActiveRecord: 3.0ms | Allocations: 28031)
+
+
+Started POST "/images" for ::1 at 2023-11-13 16:24:15 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000026ff637e7a0 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-23324-cqdvoh.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.3ms | Allocations: 4962)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'active_storage_blobs'):
+  
+app/controllers/images_controller.rb:7:in `create'
+Started POST "/images" for ::1 at 2023-11-13 16:27:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000208dcaba018 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25480-m3t2b2.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.7ms | Allocations: 17780)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'active_storage_blobs'):
+  
+app/controllers/images_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2023-11-13 16:27:44 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 269)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Started GET "/images/new" for ::1 at 2023-11-13 16:27:55 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 125.0ms | Allocations: 17769)
+  Rendered layout layouts/application.html.erb (Duration: 216.9ms | Allocations: 38941)
+Completed 200 OK in 228ms (Views: 224.7ms | ActiveRecord: 0.0ms | Allocations: 39817)
+
+
+Started POST "/images" for ::1 at 2023-11-13 16:28:11 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000208dcc1a4d0 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25480-lmixzc.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 771)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'active_storage_blobs'):
+  
+app/controllers/images_controller.rb:7:in `create'
+Started GET "/images/new" for ::1 at 2023-11-13 16:33:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231113110236_create_active_storage_tables.active_storage.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-11-13 16:41:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231113110236_create_active_storage_tables.active_storage.rb
+
+
+):
+  
+activerecord (7.1.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.1.1) lib/active_record/migration.rb:642:in `block (2 levels) in call'
+activesupport (7.1.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.1) lib/active_record/migration.rb:647:in `block in call'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `synchronize'
+activerecord (7.1.1) lib/active_record/migration.rb:639:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20231113110236)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231113110236') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-13 16:45:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 374)
+Completed 200 OK in 48ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 5253)
+
+
+Started GET "/images/new" for ::1 at 2023-11-13 16:45:25 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 155.1ms | Allocations: 22675)
+Completed 200 OK in 267ms (Views: 163.0ms | ActiveRecord: 0.4ms | Allocations: 39289)
+
+
+Started POST "/images" for ::1 at 2023-11-13 16:45:33 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000290667d4940 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-7s797y.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.2ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:15:34.161443"], ["updated_at", "2023-11-13 11:15:34.161443"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "1jc8t6dd0gomu4k2qc6e7zzby08w"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:15:34.218553"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 1], ["blob_id", 1], ["created_at", "2023-11-13 11:15:34.225838"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:15:34.229238"], ["id", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (5.4ms) [0m[32mUploaded file to key: 1jc8t6dd0gomu4k2qc6e7zzby08w (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 92775fc9-05f6-44b5-9908-0635953311a4) to Async(default) with arguments: #<GlobalID:0x00000290654bbf70 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 4.8ms | Allocations: 44301)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<ImagesController:0x0000000000c328>):
+  
+app/controllers/images_controller.rb:11:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4] Performing ActiveStorage::AnalyzeJob (Job ID: 92775fc9-05f6-44b5-9908-0635953311a4) from Async(default) enqueued at 2023-11-13T11:15:34.317119200Z with arguments: #<GlobalID:0x0000029062d6c230 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mActiveStorage::Blob Update (3.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:15:34.759674"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92775fc9-05f6-44b5-9908-0635953311a4] Performed ActiveStorage::AnalyzeJob (Job ID: 92775fc9-05f6-44b5-9908-0635953311a4) from Async(default) in 167.42ms
+Started POST "/images" for ::1 at 2023-11-13 16:52:13 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029065c66e00 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-ofn3fo.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Create (3.4ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:22:15.150102"], ["updated_at", "2023-11-13 11:22:15.150102"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "dvbrjq0and2b13ghgneaj488hz3l"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:22:15.159252"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 2], ["blob_id", 2], ["created_at", "2023-11-13 11:22:15.163256"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:22:15.166905"], ["id", 2]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (4.0ms) [0m[32mUploaded file to key: dvbrjq0and2b13ghgneaj488hz3l (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5ad584a0-f650-4766-9bbc-9f8823dabbd6) to Async(default) with arguments: #<GlobalID:0x0000029065fbc5c8 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/2>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 100ms (ActiveRecord: 8.4ms | Allocations: 23866)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:52:16 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6] Performing ActiveStorage::AnalyzeJob (Job ID: 5ad584a0-f650-4766-9bbc-9f8823dabbd6) from Async(default) enqueued at 2023-11-13T11:22:15.186507100Z with arguments: #<GlobalID:0x0000029062d0ee78 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mActiveStorage::Blob Update (2.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:22:17.015696"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6]   [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ad584a0-f650-4766-9bbc-9f8823dabbd6] Performed ActiveStorage::AnalyzeJob (Job ID: 5ad584a0-f650-4766-9bbc-9f8823dabbd6) from Async(default) in 120.48ms
+  
+ActionController::RoutingError (uninitialized constant YourControllerController):
+  
+Started GET "/images/new" for ::1 at 2023-11-13 16:52:29 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 612)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 1888)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 2813)
+
+
+Started POST "/images" for ::1 at 2023-11-13 16:52:37 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029067749c90 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-1ns284.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Create (2.0ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:22:37.398079"], ["updated_at", "2023-11-13 11:22:37.398079"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "h1u7b1x8ommernxj72136oeaplg4"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:22:37.407648"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 3], ["blob_id", 3], ["created_at", "2023-11-13 11:22:37.411730"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:22:37.414294"], ["id", 3]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (4.6ms) [0m[32mUploaded file to key: h1u7b1x8ommernxj72136oeaplg4 (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d95d0556-8428-452d-8fee-bd997c4166b4) to Async(default) with arguments: #<GlobalID:0x00000290661b05c8 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/3>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 3.0ms | Allocations: 8032)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:52:37 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4] Performing ActiveStorage::AnalyzeJob (Job ID: d95d0556-8428-452d-8fee-bd997c4166b4) from Async(default) enqueued at 2023-11-13T11:22:37.426744400Z with arguments: #<GlobalID:0x0000029066404928 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mActiveStorage::Blob Update (1.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:22:37.610395"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d95d0556-8428-452d-8fee-bd997c4166b4] Performed ActiveStorage::AnalyzeJob (Job ID: d95d0556-8428-452d-8fee-bd997c4166b4) from Async(default) in 24.9ms
+  
+ActionController::RoutingError (uninitialized constant YourControllerController):
+  
+Started GET "/" for ::1 at 2023-11-13 16:52:56 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 264)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 893)
+
+
+Started GET "/images/new" for ::1 at 2023-11-13 16:53:00 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1889)
+Completed 200 OK in 35ms (Views: 20.0ms | ActiveRecord: 3.8ms | Allocations: 6695)
+
+
+Started POST "/images" for ::1 at 2023-11-13 16:53:09 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029064343680 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-xhh0ui.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.6ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:23:09.841085"], ["updated_at", "2023-11-13 11:23:09.841085"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "1q6idxyv2ae9sshm0f2dlrrnqyzj"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:23:09.852366"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 4], ["blob_id", 4], ["created_at", "2023-11-13 11:23:09.856663"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.3ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:23:09.861739"], ["id", 4]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (3.8ms) [0m[32mUploaded file to key: 1q6idxyv2ae9sshm0f2dlrrnqyzj (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 27b0442e-3507-4c10-9cb1-4000f41ad85b) to Async(default) with arguments: #<GlobalID:0x0000029066668e80 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/4>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 7.0ms | Allocations: 21351)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<ImagesController:0x00000000018f88>):
+  
+app/controllers/images_controller.rb:11:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b] Performing ActiveStorage::AnalyzeJob (Job ID: 27b0442e-3507-4c10-9cb1-4000f41ad85b) from Async(default) enqueued at 2023-11-13T11:23:09.882085700Z with arguments: #<GlobalID:0x0000029066e49758 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mActiveStorage::Blob Update (2.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:23:10.216828"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [27b0442e-3507-4c10-9cb1-4000f41ad85b] Performed ActiveStorage::AnalyzeJob (Job ID: 27b0442e-3507-4c10-9cb1-4000f41ad85b) from Async(default) in 31.85ms
+Started POST "/images" for ::1 at 2023-11-13 16:56:08 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029066be4b70 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-he9tic.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.1ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:26:10.468882"], ["updated_at", "2023-11-13 11:26:10.468882"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "bbh1qey4eg9rzy0zq7wdh9tak7x3"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:26:10.480005"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 5], ["blob_id", 5], ["created_at", "2023-11-13 11:26:10.484064"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:26:10.486945"], ["id", 5]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (3.8ms) [0m[32mUploaded file to key: bbh1qey4eg9rzy0zq7wdh9tak7x3 (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f585e600-65d9-4b75-a5f3-d8095c56cd4c) to Async(default) with arguments: #<GlobalID:0x0000029065ffde88 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/5>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 10.9ms | Allocations: 24941)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:56:12 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c] Performing ActiveStorage::AnalyzeJob (Job ID: f585e600-65d9-4b75-a5f3-d8095c56cd4c) from Async(default) enqueued at 2023-11-13T11:26:10.505191800Z with arguments: #<GlobalID:0x0000029066e82ee0 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mActiveStorage::Blob Update (2.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:26:12.376208"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f585e600-65d9-4b75-a5f3-d8095c56cd4c] Performed ActiveStorage::AnalyzeJob (Job ID: f585e600-65d9-4b75-a5f3-d8095c56cd4c) from Async(default) in 107.86ms
+Processing by ExampleController#hello_world as HTML
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 161)
+
+
+Started POST "/images" for ::1 at 2023-11-13 16:57:34 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029064342730 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-iy7lq4.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:27:36.854655"], ["updated_at", "2023-11-13 11:27:36.854655"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "0gi7byxuprzsyngz52jhgyxrobn1"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:27:36.860940"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 6], ["blob_id", 6], ["created_at", "2023-11-13 11:27:36.865638"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:27:36.869080"], ["id", 6]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (4.7ms) [0m[32mUploaded file to key: 0gi7byxuprzsyngz52jhgyxrobn1 (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a7fb3f33-b681-4426-8369-f53760f261f8) to Async(default) with arguments: #<GlobalID:0x00000290664c2108 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/6>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 94ms (ActiveRecord: 8.3ms | Allocations: 24976)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:57:38 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8] Performing ActiveStorage::AnalyzeJob (Job ID: a7fb3f33-b681-4426-8369-f53760f261f8) from Async(default) enqueued at 2023-11-13T11:27:36.885491100Z with arguments: #<GlobalID:0x0000029062d02920 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mActiveStorage::Blob Update (1.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mImage Update (0.2ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:27:38.709650"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a7fb3f33-b681-4426-8369-f53760f261f8] Performed ActiveStorage::AnalyzeJob (Job ID: a7fb3f33-b681-4426-8369-f53760f261f8) from Async(default) in 111.46ms
+  
+ActionController::RoutingError (uninitialized constant YourControllerController):
+  
+Started POST "/images" for ::1 at 2023-11-13 16:58:20 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029067d9c778 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-e8up34.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.2ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:28:22.056072"], ["updated_at", "2023-11-13 11:28:22.056072"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "n9zsiktpvjnok95xo8frr0r60wfz"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:28:22.061730"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 7], ["blob_id", 7], ["created_at", "2023-11-13 11:28:22.065136"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:28:22.069058"], ["id", 7]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (3.8ms) [0m[32mUploaded file to key: n9zsiktpvjnok95xo8frr0r60wfz (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 109e681c-1691-48e1-8440-85b979e66d3e) to Async(default) with arguments: #<GlobalID:0x0000029062d9ac48 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/7>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 94ms (ActiveRecord: 12.6ms | Allocations: 24970)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:58:23 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e] Performing ActiveStorage::AnalyzeJob (Job ID: 109e681c-1691-48e1-8440-85b979e66d3e) from Async(default) enqueued at 2023-11-13T11:28:22.087124500Z with arguments: #<GlobalID:0x0000029068183f58 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mActiveStorage::Blob Update (1.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:28:23.925516"], ["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [109e681c-1691-48e1-8440-85b979e66d3e] Performed ActiveStorage::AnalyzeJob (Job ID: 109e681c-1691-48e1-8440-85b979e66d3e) from Async(default) in 110.6ms
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started POST "/images" for ::1 at 2023-11-13 16:58:44 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000029067f52040 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-3080-q516ul.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:28:46.031956"], ["updated_at", "2023-11-13 11:28:46.031956"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "epk6sj2j2kw7wqawgf80zmw8c3dt"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:28:46.040467"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 8], ["blob_id", 8], ["created_at", "2023-11-13 11:28:46.044229"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:28:46.050861"], ["id", 8]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (5.3ms) [0m[32mUploaded file to key: epk6sj2j2kw7wqawgf80zmw8c3dt (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 2386894f-981d-487b-8797-18a0331b225c) to Async(default) with arguments: #<GlobalID:0x000002906846d9f8 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/8>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 11.8ms | Allocations: 24991)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:58:47 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c] Performing ActiveStorage::AnalyzeJob (Job ID: 2386894f-981d-487b-8797-18a0331b225c) from Async(default) enqueued at 2023-11-13T11:28:46.071601800Z with arguments: #<GlobalID:0x000002906814e538 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mActiveStorage::Blob Update (2.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:28:48.102989"], ["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c]   [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2386894f-981d-487b-8797-18a0331b225c] Performed ActiveStorage::AnalyzeJob (Job ID: 2386894f-981d-487b-8797-18a0331b225c) from Async(default) in 131.32ms
+Processing by ExampleController#hello_world as HTML
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 148)
+
+
+Started GET "/" for ::1 at 2023-11-13 16:59:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExampleController#hello_world as HTML
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1165)
+
+
+Started GET "/" for ::1 at 2023-11-13 17:00:16 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 372)
+Completed 200 OK in 56ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 4325)
+
+
+Started GET "/images/new" for ::1 at 2023-11-13 17:01:00 +0530
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1549)
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 22762)
+Completed 200 OK in 264ms (Views: 116.2ms | ActiveRecord: 3.4ms | Allocations: 34170)
+
+
+Started POST "/images" for ::1 at 2023-11-13 17:01:12 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000020413745158 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25992-e66nuq.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.4ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:31:13.142193"], ["updated_at", "2023-11-13 11:31:13.142193"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "u9s5osm2c2hub1abdythnvqn9nh1"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:31:13.186786"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 9], ["blob_id", 9], ["created_at", "2023-11-13 11:31:13.190503"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:31:13.194575"], ["id", 9]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (5.1ms) [0m[32mUploaded file to key: u9s5osm2c2hub1abdythnvqn9nh1 (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1248f44b-2ef5-4c11-b944-167ca3f78742) to Async(default) with arguments: #<GlobalID:0x000002041735e928 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/9>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 5.4ms | Allocations: 46142)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<ImagesController:0x00000000010068>):
+  
+app/controllers/images_controller.rb:11:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742] Performing ActiveStorage::AnalyzeJob (Job ID: 1248f44b-2ef5-4c11-b944-167ca3f78742) from Async(default) enqueued at 2023-11-13T11:31:13.273025900Z with arguments: #<GlobalID:0x00000204195f0ae0 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mActiveStorage::Blob Update (4.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:31:13.634425"], ["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1248f44b-2ef5-4c11-b944-167ca3f78742] Performed ActiveStorage::AnalyzeJob (Job ID: 1248f44b-2ef5-4c11-b944-167ca3f78742) from Async(default) in 65.55ms
+Started POST "/images" for ::1 at 2023-11-13 17:04:16 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000204187ed4e8 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25992-vjf3xp.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:34:18.252054"], ["updated_at", "2023-11-13 11:34:18.252054"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "klrrh0sz7en1ues0eazmz5ok4tdt"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:34:18.259820"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 10], ["blob_id", 10], ["created_at", "2023-11-13 11:34:18.263373"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.2ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:34:18.266148"], ["id", 10]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (3.4ms) [0m[32mUploaded file to key: klrrh0sz7en1ues0eazmz5ok4tdt (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 960d1362-3eb0-49c9-90f2-062ffddc7e6e) to Async(default) with arguments: #<GlobalID:0x0000020414f99038 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/10>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (ActiveRecord: 9.1ms | Allocations: 25107)
+
+
+Started GET "/" for ::1 at 2023-11-13 17:04:20 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e] Performing ActiveStorage::AnalyzeJob (Job ID: 960d1362-3eb0-49c9-90f2-062ffddc7e6e) from Async(default) enqueued at 2023-11-13T11:34:18.283346700Z with arguments: #<GlobalID:0x000002041913a528 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/10>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mActiveStorage::Blob Update (1.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mImage Update (0.2ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:34:20.126516"], ["id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e]   [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [960d1362-3eb0-49c9-90f2-062ffddc7e6e] Performed ActiveStorage::AnalyzeJob (Job ID: 960d1362-3eb0-49c9-90f2-062ffddc7e6e) from Async(default) in 113.65ms
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started POST "/images" for ::1 at 2023-11-13 17:04:39 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000020418861910 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25992-sle1o4.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.5ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:34:41.297401"], ["updated_at", "2023-11-13 11:34:41.297401"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "btdtnlk3c2ih8bsln22tq569pe1z"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:34:41.304474"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 11], ["blob_id", 11], ["created_at", "2023-11-13 11:34:41.307584"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:34:41.310256"], ["id", 11]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (3.1ms) [0m[32mUploaded file to key: btdtnlk3c2ih8bsln22tq569pe1z (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8b09f17a-5363-4fc2-8e39-cf99611c66b0) to Async(default) with arguments: #<GlobalID:0x00000204195ffba8 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/11>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 7.9ms | Allocations: 24995)
+
+
+Started GET "/" for ::1 at 2023-11-13 17:04:43 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0] Performing ActiveStorage::AnalyzeJob (Job ID: 8b09f17a-5363-4fc2-8e39-cf99611c66b0) from Async(default) enqueued at 2023-11-13T11:34:41.326751400Z with arguments: #<GlobalID:0x0000020419621578 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mActiveStorage::Blob Update (2.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mImage Update (0.3ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:34:43.145481"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0]   [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b09f17a-5363-4fc2-8e39-cf99611c66b0] Performed ActiveStorage::AnalyzeJob (Job ID: 8b09f17a-5363-4fc2-8e39-cf99611c66b0) from Async(default) in 113.02ms
+Processing by ExampleController#hello_world as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 150)
+
+
+Started POST "/images" for ::1 at 2023-11-13 17:06:11 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000020415ecd4f0 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25992-q0b17o.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.2ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:36:13.869658"], ["updated_at", "2023-11-13 11:36:13.869658"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "jnjdii89haltz0o4fknx08o9v7ja"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:36:13.876296"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 12], ["blob_id", 12], ["created_at", "2023-11-13 11:36:13.880618"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:36:13.884817"], ["id", 12]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (4.3ms) [0m[32mUploaded file to key: jnjdii89haltz0o4fknx08o9v7ja (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9b57af26-13e4-4104-9b75-51cfa7ca76df) to Async(default) with arguments: #<GlobalID:0x0000020418de2240 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/12>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 10.3ms | Allocations: 24988)
+
+
+Started GET "/" for ::1 at 2023-11-13 17:06:15 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df] Performing ActiveStorage::AnalyzeJob (Job ID: 9b57af26-13e4-4104-9b75-51cfa7ca76df) from Async(default) enqueued at 2023-11-13T11:36:13.903257700Z with arguments: #<GlobalID:0x0000020419765538 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mActiveStorage::Blob Update (1.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:36:15.736311"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df]   [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b57af26-13e4-4104-9b75-51cfa7ca76df] Performed ActiveStorage::AnalyzeJob (Job ID: 9b57af26-13e4-4104-9b75-51cfa7ca76df) from Async(default) in 111.47ms
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 688)
+
+
+Started POST "/images" for ::1 at 2023-11-13 17:07:22 +0530
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:15:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/images" for ::1 at 2023-11-13 17:07:41 +0530
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000020418747b38 @tempfile=#<Tempfile:C:/Users/hp/AppData/Local/Temp/RackMultipart20231113-25992-o2vyjh.jpg>, @content_type="image/jpeg", @original_filename="e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload Image"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/image.rb:10:in `validate_image_format'
+  [1m[36mImage Create (0.2ms)[0m  [1m[32mINSERT INTO "images" ("file", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["file", nil], ["created_at", "2023-11-13 11:37:42.298174"], ["updated_at", "2023-11-13 11:37:42.298174"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Image"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "fno468gkke86q7tgo4kxy82q6zef"], ["filename", "e8f06770-63ac-48b0-8a14-b21f30de9c77.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 359638], ["checksum", "HNV7eOmm0umvvwIWN7OGfA=="], ["created_at", "2023-11-13 11:37:42.303936"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "image"], ["record_type", "Image"], ["record_id", 13], ["blob_id", 13], ["created_at", "2023-11-13 11:37:42.307521"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:37:42.312270"], ["id", 13]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+[36m  Disk Storage (6.1ms) [0m[32mUploaded file to key: fno468gkke86q7tgo4kxy82q6zef (checksum: HNV7eOmm0umvvwIWN7OGfA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 2b82d830-aad5-458d-ba5a-c396ff0a7c43) to Async(default) with arguments: #<GlobalID:0x000002041a430970 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/13>>
+[ActiveJob] ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 12.1ms | Allocations: 24992)
+
+
+Started GET "/" for ::1 at 2023-11-13 17:07:44 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43] Performing ActiveStorage::AnalyzeJob (Job ID: 2b82d830-aad5-458d-ba5a-c396ff0a7c43) from Async(default) enqueued at 2023-11-13T11:37:42.337215000Z with arguments: #<GlobalID:0x0000020418e914c0 @uri=#<URI::GID gid://hr-mitra/ActiveStorage::Blob/13>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mActiveStorage::Blob Update (2.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ?[0m  [["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mImage Update (0.1ms)[0m  [1m[33mUPDATE "images" SET "updated_at" = ? WHERE "images"."id" = ?[0m  [["updated_at", "2023-11-13 11:37:44.187578"], ["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43]   [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2b82d830-aad5-458d-ba5a-c396ff0a7c43] Performed ActiveStorage::AnalyzeJob (Job ID: 2b82d830-aad5-458d-ba5a-c396ff0a7c43) from Async(default) in 112.07ms
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 2)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 371)
+
+
+Started GET "/" for ::1 at 2023-11-13 17:28:23 +0530
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 2)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 165)
+
+

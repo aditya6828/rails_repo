@@ -7,7 +7,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get '/hello_world', to: 'example#hello_world'
+  # root 'home#index'
+  # root 'your_controller#your_action'
+
+  # root 'example#hello_world'
+  root 'rails/health#show'
+  
+  # get '/hello_world', to: 'example#hello_world'
 
   post '/user/register', to: 'users#register'
  
@@ -38,6 +44,12 @@ Rails.application.routes.draw do
   post '/reset_password_submit', to: 'users#reset_password_submit', as: 'reset_password_submit'
 
   # config/routes.rb
+  # resources :images, only: [:new, :create]
+
+  get '/images/new', to: 'images#new'
+  post '/images', to: 'images#create', as: 'images'
+
+  # resources :images, only: [:new, :create]
 
 
 end
